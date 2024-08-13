@@ -23,10 +23,3 @@ export interface IMovie {
     belongs_to_collection?: ICollection | null;
     budget?: number;
 }
-
-export interface IMoviesResponse {
-    page: number;
-    results: IMovie[];
-    total_pages: number;
-    total_results: number;
-}

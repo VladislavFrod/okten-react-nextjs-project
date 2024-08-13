@@ -1,35 +1,52 @@
 'use client'
 
-import {useEffect, useState} from "react";
-import {getAllMovies} from "@/services/api-services";
-import {IMovie, IMoviesResponse} from "@/models/IMovie";
+import React, { useEffect, useState } from 'react';
+import { IMovie } from "@/models/IMovie";
+import { getAllMovies } from "@/services/api-services";
+import MovieListComponent from "@/components/movies-list/Movie-List-Component";
 
-const MoviesPage = () => {
-    const [movies, setMovies] = useState<IMoviesResponse | null>(null);
+const MoviesListPage = () => {
+    const [movies, setMovies] = useState<IMovie[]>([]);
+    const [page, setPage] = useState(1);
+    const [loading, setLoading] = useState<boolean>(true);
+    const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
-        const getMovies = async () => {
-            const data:IMovie[] = await getAllMovies(1); // передаємо номер сторінки, за потреби
-            setMovies(data);
+        const fetchMovies = async () => {
+            try {
+                const response = await getAllMovies(page);
+                setMovies(prevMovies => [...prevMovies, ...response]); // Використовуємо response.results
+            } catch (error) {
+                setError("error when receiving movies");
+            } finally {
+                setLoading(false);
+            }
         };
 
-        getMovies();
-    }, []);
+        fetchMovies();
+    }, [page]);
+
+    const loadMore = () => {
+        setPage(prevPage => prevPage + 1);
+    };
+
+    if (loading) return <div>Loaded...</div>;
+    if (error) return <div>{error}</div>;
 
     return (
         <div>
-            <h1>Movies</h1>
-            {movies ? (
-                <ul>
-                    {movies.results.map((movie: IMovie) => (
-                        <li key={movie.id}>{movie.title}</li>
+            {movies.length > 0 ? (
+                <>
+                    {movies.map((movie) => (
+                        <MovieListComponent key={movie.id} movie={movie} />
                     ))}
-                </ul>
+                    <button onClick={loadMore}>Завантажити більше</button>
+                </>
             ) : (
-                <p>Loading...</p>
+                <div>Немає фільмів для відображення</div>
             )}
         </div>
     );
 };
 
-export default MoviesPage;
+export default MoviesListPage;

@@ -5,61 +5,61 @@ const GenresSidebarComponent = () => {
     return (
         <div>
             <li>
-                <NavLinkComponent path={'militants'}>Militants</NavLinkComponent>
+                <NavLinkComponent path={'genres/militants'}>Militants</NavLinkComponent>
             </li>
             <li>
-                <NavLinkComponent path={'biography'}>Biography</NavLinkComponent>
+                <NavLinkComponent path={'genres/biography'}>Biography</NavLinkComponent>
             </li>
             <li>
-                <NavLinkComponent path={'westerns'}>westerns</NavLinkComponent>
+                <NavLinkComponent path={'genres/westerns'}>westerns</NavLinkComponent>
             </li>
             <li>
-                <NavLinkComponent path={'military'}>Military</NavLinkComponent>
+                <NavLinkComponent path={'genres/military'}>Military</NavLinkComponent>
             </li>
             <li>
-                <NavLinkComponent path={'detectives'}>Detectives</NavLinkComponent>
+                <NavLinkComponent path={'genres/detectives'}>Detectives</NavLinkComponent>
             </li>
             <li>
-                <NavLinkComponent path={'Documentary'}>documentary</NavLinkComponent>
+                <NavLinkComponent path={'genres/Documentary'}>documentary</NavLinkComponent>
             </li>
             <li>
-                <NavLinkComponent path={'drama'}>drama</NavLinkComponent>
+                <NavLinkComponent path={'genres/drama'}>drama</NavLinkComponent>
             </li>
             <li>
-                <NavLinkComponent path={'historical'}>Historical</NavLinkComponent>
+                <NavLinkComponent path={'genres/historical'}>Historical</NavLinkComponent>
             </li>
             <li>
-                <NavLinkComponent path={'comedy'}>Comedy</NavLinkComponent>
+                <NavLinkComponent path={'genres/comedy'}>Comedy</NavLinkComponent>
             </li>
             <li>
-                <NavLinkComponent path={'criminal'}>Criminal</NavLinkComponent>
+                <NavLinkComponent path={'genres/criminal'}>Criminal</NavLinkComponent>
             </li>
             <li>
-                <NavLinkComponent path={'melodramas'}>Melodramas</NavLinkComponent>
+                <NavLinkComponent path={'genres/melodramas'}>Melodramas</NavLinkComponent>
             </li>
             <li>
-                <NavLinkComponent path={'cartoons'}>cartoons</NavLinkComponent>
+                <NavLinkComponent path={'genres/cartoons'}>cartoons</NavLinkComponent>
             </li>
             <li>
-                <NavLinkComponent path={'music'}>Music</NavLinkComponent>
+                <NavLinkComponent path={'genres/music'}>Music</NavLinkComponent>
             </li>
             <li>
-                <NavLinkComponent path={'adventures'}>Adventures</NavLinkComponent>
+                <NavLinkComponent path={'genres/adventures'}>Adventures</NavLinkComponent>
             </li>
             <li>
-                <NavLinkComponent path={'family'}>Family</NavLinkComponent>
+                <NavLinkComponent path={'genres/family'}>Family</NavLinkComponent>
             </li>
             <li>
-                <NavLinkComponent path={'sports'}>Sports</NavLinkComponent>
+                <NavLinkComponent path={'genres/sports'}>Sports</NavLinkComponent>
             </li>
             <li>
-                <NavLinkComponent path={'thrillers'}>Thrillers</NavLinkComponent>
+                <NavLinkComponent path={'genres/thrillers'}>Thrillers</NavLinkComponent>
             </li>
             <li>
-                <NavLinkComponent path={'horror'}>Horror</NavLinkComponent>
+                <NavLinkComponent path={'genres/horror'}>Horror</NavLinkComponent>
             </li>
             <li>
-                <NavLinkComponent path={'fantastic'}>Fantastic</NavLinkComponent>
+                <NavLinkComponent path={'genres/fantastic'}>Fantastic</NavLinkComponent>
             </li>
         </div>
     );

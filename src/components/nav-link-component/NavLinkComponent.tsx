@@ -1,26 +1,19 @@
-'use client'
+'use client';
 
-import React, {FC} from 'react';
-import {usePathname} from "next/navigation";
-import Link from "next/link";
-
-import './nav-link.css';
+import React, { FC } from 'react';
+import Link from 'next/link'; // Імпорт Link з next/link
 
 type IProps = {
-    path: string,
-    children: React.ReactNode,
-}
+    path: string;
+    children: React.ReactNode;
+};
 
-const NavLinkClientComponent: FC<IProps> = ({path, children}) => {
-
-    let pathname = usePathname();
+const NavLinkComponent: FC<IProps> = ({ path, children }) => {
     return (
-        <div>
-            <Link href={path} className={pathname === path ? 'active' : ''}>
-                {children}
-            </Link>
-        </div>
+        <Link href={path} className="nav-link">
+            {children}
+        </Link>
     );
 };
 
-export default NavLinkClientComponent;
+export default NavLinkComponent;

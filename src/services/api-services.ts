@@ -2,6 +2,7 @@ import {baseUrl} from "@/constants/urls";
 import {options} from "@/constants/apiConfig";
 import {IMovie} from "@/models/IMovie";
 import {IGenres} from "@/models/IGenres";
+import {ITest} from "@/models/Itest";
 
 interface IMoviesResponse {
         results: IMovie[];
@@ -33,3 +34,10 @@ export const getGenres = async (): Promise<IGenres> => {
         const date: IGenres = await response.json();
         return date
 }
+
+
+export const getMoviesByGenre = async (genreId: number): Promise<ITest> => {
+        const response = await fetch(`${baseUrl}/genre/${genreId}/movies?language=en-US`, options);
+        const data: ITest = await response.json();
+        return data; // Повертаємо об'єкт з масивом фільмів
+};

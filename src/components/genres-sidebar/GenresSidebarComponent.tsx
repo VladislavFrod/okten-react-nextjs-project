@@ -5,7 +5,7 @@ const GenresSidebarComponent = () => {
     return (
         <div>
             <li>
-                <NavLinkComponent path={'genres/militants'}>Militants</NavLinkComponent>
+                <NavLinkComponent path={`genres/Militants`}>Militants</NavLinkComponent>
             </li>
             <li>
                 <NavLinkComponent path={'genres/biography'}>Biography</NavLinkComponent>

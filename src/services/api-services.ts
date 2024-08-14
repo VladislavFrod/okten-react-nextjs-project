@@ -11,13 +11,13 @@ interface IMoviesResponse {
         total_results: number;
 }
 
-export const getAllMovies = async (page: number = 1): Promise<IMovie[]> => {
+export const getAllMovies = async (page: number = 1): Promise<IMoviesResponse> => {
         const response = await fetch(
             `${baseUrl}/discover/movie?&language=en-US&page=${page}`,
             options
         );
         const data: IMoviesResponse = await response.json();
-        return data.results; // Повертаємо лише масив фільмів
+        return data; // Повертаємо весь об'єкт IMoviesResponse
 };
 
 export const getMovieById = async (id: number): Promise<IMovie> => {
@@ -36,8 +36,11 @@ export const getGenres = async (): Promise<IGenres> => {
 }
 
 
-export const getMoviesByGenre = async (genreId: number): Promise<ITest> => {
-        const response = await fetch(`${baseUrl}/genre/${genreId}/movies?language=en-US`, options);
-        const data: ITest = await response.json();
-        return data; // Повертаємо об'єкт з масивом фільмів
+export const getMoviesByGenre = async (genreId: number, page: number = 1): Promise<IMoviesResponse> => {
+        const response = await fetch(
+            `${baseUrl}/genre/${genreId}/movies?&language=en-US&page=${page}`,
+            options
+        );
+        const data: IMoviesResponse = await response.json();
+        return data;
 };

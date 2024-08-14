@@ -1,3 +1,3 @@
 export interface PaginatedPageModel {
-    page: string;
+    page: number;
 }

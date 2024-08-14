@@ -22,4 +22,11 @@ export interface IMovie {
     vote_count: number;
     belongs_to_collection?: ICollection | null;
     budget?: number;
+    total_pages: number
+}
+export interface IMoviesResponse {
+    results: IMovie[];
+    page: number;
+    total_pages: number;
+    total_results: number;
 }

@@ -4,26 +4,21 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation'; // Для отримання параметрів маршруту
 import { getMoviesByGenre } from '@/services/api-services';
 import NavLinkComponent from '@/components/nav-link-component/NavLinkComponent';
-
-type Movie = {
-    id: number;
-    title: string;
-    backdrop_path: string;
-    // інші властивості фільму
-};
+import { IMovie, IMoviesResponse } from '@/models/IMovie'; // Переконайтесь, що імплементуєте коректно
 
 const MoviesByGenrePage = () => {
-    const { id } = useParams(); // Отримання ID жанру з URL
+    const { id } = useParams();
     const genreId = parseInt(id as string, 10);
-    const [movies, setMovies] = useState<Movie[]>([]);
+    const [movies, setMovies] = useState<IMovie[]>([]);
+    const [page, setPage] = useState(1);
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
         const loadMovies = async () => {
             try {
-                const data = await getMoviesByGenre(genreId); // Отримання фільмів за жанром
-                setMovies(data.results); // Збереження фільмів у стані
+                const data: IMoviesResponse = await getMoviesByGenre(genreId, page); // Отримання фільмів за жанром і сторінкою
+                setMovies(prevMovies => [...prevMovies, ...data.results]); // Збереження фільмів у стані
             } catch (error) {
                 setError("Error fetching movies");
             } finally {
@@ -34,7 +29,11 @@ const MoviesByGenrePage = () => {
         if (genreId) {
             loadMovies();
         }
-    }, [genreId]);
+    }, [genreId, page]);
+
+    const loadMore = () => {
+        setPage(prevPage => prevPage + 1);
+    };
 
     if (loading) return <div>Loading...</div>;
     if (error) return <div>{error}</div>;
@@ -52,6 +51,7 @@ const MoviesByGenrePage = () => {
                     </li>
                 ))}
             </ul>
+            <button onClick={loadMore}>Завантажити ще</button>
         </div>
     );
 };

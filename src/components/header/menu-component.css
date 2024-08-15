@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap');
+
+.menuComponent{
+    width: 100%;
+    max-width: 1200px;
+    border: 2px solid gray;
+    margin: 20px 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.menuNavig {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    max-width: 1200px;
+
+}
+
+.menuNavig li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+
+}
+
+.menuNavig li{
+    display: flex;
+    text-align: center;
+    background-color: gray;
+    margin-left: 1px;
+    width: 10%;
+    border: 5px solid gray;
+}
+
+.menuNavig li a:hover {
+    text-decoration: underline;
+}

@@ -21,8 +21,28 @@ body {
     scroll-behavior: smooth;
     overflow-x: hidden;
     width: 100vw;
+
 }
 
 .main-component {
     display: flex;
+}
+
+
+.movie-card {
+    width: 150px;
+    flex-shrink: 0;
+    transition: transform 0.3s;
+}
+.movie-card img {
+    width: auto;
+    height: 100 px;
+    border-radius: 8px;
+}
+.menu-component{
+    background-color: #414141;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 10%;
+    border: 2px solid gray;
 }

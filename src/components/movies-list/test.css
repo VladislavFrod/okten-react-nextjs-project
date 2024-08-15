@@ -1,0 +1,27 @@
+.movies-slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.movies-slider {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 10px;
+}
+
+.movies-slider::-webkit-scrollbar {
+    display: none; /* Приховуємо скролбар для WebKit браузерів */
+}
+
+.movies-slider > * {
+    flex: 0 0 auto;
+    transition: transform 0.3s;
+}
+
+.movies-slider > *:hover {
+    transform: scale(1.05); /* Збільшуємо елемент при наведенні */
+}

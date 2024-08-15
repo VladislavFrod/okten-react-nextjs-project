@@ -1,14 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./app/**/*.{js,ts,jsx,tsx,mdx}', // Note the addition of the `app` directory.
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-
-    // Or if using `src` directory:
-    './src/**/*.{js,ts,jsx,tsx,mdx}',],
+  content: [
+    './app/**/*.{js,ts,jsx,tsx,mdx}', // Для файлів у директорії `app`
+    './pages/**/*.{js,ts,jsx,tsx,mdx}', // Для файлів у директорії `pages`
+    './components/**/*.{js,ts,jsx,tsx,mdx}', // Для файлів у директорії `components`
+    './src/**/*.{js,ts,jsx,tsx,mdx}', // Для файлів у директорії `src`, якщо вона використовується
+  ],
   theme: {
     extend: {},
   },
+  darkMode: 'class', // Додаємо підтримку темного режиму
   plugins: [],
 }
-

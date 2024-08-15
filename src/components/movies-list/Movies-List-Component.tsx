@@ -31,7 +31,7 @@ const MoviesListPage = () => {
 
 
     return (
-        <div>
+        <div className="bg-white dark:bg-gray-900 text-black dark:text-white">
             {movies.map((movie) =>
                 (<MoviesInfoComponent key={movie.id} movie={movie} />)
             )}

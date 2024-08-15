@@ -17,7 +17,7 @@ type PropType = { children: React.ReactNode };
 export default function RootLayout({children}: Readonly<PropType>) {
   return (
       <html lang="en">
-      <body className={inter.className}>
+      <body className={inter.className} >
 
         <HeaderComponent/>
         <div className={'main-component'}>

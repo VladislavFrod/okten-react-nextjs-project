@@ -1,10 +1,10 @@
 import React from 'react';
-import GenresPage from "@/components/genres-sidebar/Genre-list-Component";
+import GenresSidebarComponent from "@/components/genres-sidebar/GenresSidebarComponent";
 
 const Page = () => {
     return (
         <div>
-            <GenresPage/>
+            <GenresSidebarComponent/>
         </div>
     );
 };

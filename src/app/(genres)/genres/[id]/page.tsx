@@ -1,10 +1,10 @@
 import React from 'react';
-import MoviesByGenrePage from "@/components/genre-badge/Genre-Test-Component";
+import MoviesGenreComponent from "@/components/genre/Movies-Genre-Component";
 
 const Page = () => {
     return (
         <div>
-          <MoviesByGenrePage/>
+          <MoviesGenreComponent/>
         </div>
     );
 };

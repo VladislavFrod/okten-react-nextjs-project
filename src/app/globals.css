@@ -11,7 +11,7 @@
 body {
     /*background-size: cover;*/
     /*background-position: center;*/
-    /*background-image: url("/assets/background/BackGround.png");*/
+    /*background-image: url('../assets/background/BackGround.png');*/
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;

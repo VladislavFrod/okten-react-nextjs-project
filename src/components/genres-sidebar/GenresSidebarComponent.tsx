@@ -1,66 +1,37 @@
-import React from 'react';
+'use client';
+
+import React, {useEffect, useState} from 'react';
+import {getGenres} from '@/services/api-services';
 import NavLinkComponent from "@/components/nav-link-component/NavLinkComponent";
 
+type Genre = {
+    id: number;
+    name: string;
+};
+
 const GenresSidebarComponent = () => {
+    const [genres, setGenres] = useState<Genre[]>([]);
+
+    useEffect(() => {
+        const loadGenres = async () => {
+                const data = await getGenres();
+                setGenres(data.genres);
+        };
+
+        loadGenres();
+    }, []);
+
+
     return (
         <div>
-            <li>
-                <NavLinkComponent path={`genres/Militants`}>Militants</NavLinkComponent>
-            </li>
-            <li>
-                <NavLinkComponent path={'genres/biography'}>Biography</NavLinkComponent>
-            </li>
-            <li>
-                <NavLinkComponent path={'genres/westerns'}>westerns</NavLinkComponent>
-            </li>
-            <li>
-                <NavLinkComponent path={'genres/military'}>Military</NavLinkComponent>
-            </li>
-            <li>
-                <NavLinkComponent path={'genres/detectives'}>Detectives</NavLinkComponent>
-            </li>
-            <li>
-                <NavLinkComponent path={'genres/Documentary'}>documentary</NavLinkComponent>
-            </li>
-            <li>
-                <NavLinkComponent path={'genres/drama'}>drama</NavLinkComponent>
-            </li>
-            <li>
-                <NavLinkComponent path={'genres/historical'}>Historical</NavLinkComponent>
-            </li>
-            <li>
-                <NavLinkComponent path={'genres/comedy'}>Comedy</NavLinkComponent>
-            </li>
-            <li>
-                <NavLinkComponent path={'genres/criminal'}>Criminal</NavLinkComponent>
-            </li>
-            <li>
-                <NavLinkComponent path={'genres/melodramas'}>Melodramas</NavLinkComponent>
-            </li>
-            <li>
-                <NavLinkComponent path={'genres/cartoons'}>cartoons</NavLinkComponent>
-            </li>
-            <li>
-                <NavLinkComponent path={'genres/music'}>Music</NavLinkComponent>
-            </li>
-            <li>
-                <NavLinkComponent path={'genres/adventures'}>Adventures</NavLinkComponent>
-            </li>
-            <li>
-                <NavLinkComponent path={'genres/family'}>Family</NavLinkComponent>
-            </li>
-            <li>
-                <NavLinkComponent path={'genres/sports'}>Sports</NavLinkComponent>
-            </li>
-            <li>
-                <NavLinkComponent path={'genres/thrillers'}>Thrillers</NavLinkComponent>
-            </li>
-            <li>
-                <NavLinkComponent path={'genres/horror'}>Horror</NavLinkComponent>
-            </li>
-            <li>
-                <NavLinkComponent path={'genres/fantastic'}>Fantastic</NavLinkComponent>
-            </li>
+            <h1>Genres</h1>
+            <ul>
+                {genres.map((genre) => (
+                    <li key={genre.id}>
+                        <NavLinkComponent path={`/genres/${genre.id}`}>{genre.name}</NavLinkComponent>
+                    </li>
+                ))}
+            </ul>
         </div>
     );
 };

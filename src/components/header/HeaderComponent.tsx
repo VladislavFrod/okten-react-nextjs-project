@@ -10,7 +10,7 @@ import PosterPreviewComponent from "@/components/poster-preview/Poster-Preview-C
 const HeaderComponent: FC = () => {
     const [query, setQuery] = useState('');
     const [movies, setMovies] = useState<IMovie[]>([]);
-    const pathname = usePathname(); // Отримуємо поточний маршрут
+    const pathname = usePathname();
 
     const handleSearch = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -50,7 +50,7 @@ const HeaderComponent: FC = () => {
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                     placeholder="Search movies..."
-                    onBlur={() => setMovies([])} // Очищення результатів при втраті фокусу
+                    onBlur={() => setMovies([])}
                 />
                 <button type="submit">Search</button>
             </form>
@@ -58,8 +58,7 @@ const HeaderComponent: FC = () => {
             {movies.length > 0 && (
                 <ul>
                     {movies.map(movie => (
-                        <li key={movie.id}>
-                            {movie.title}
+                        <li key={movie.id}> {movie.title}
                             <PosterPreviewComponent movie={movie} />
                         </li>
                     ))}

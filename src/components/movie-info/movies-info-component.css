@@ -1,0 +1,13 @@
+.movies-info{
+display: flex;
+margin-left: 5%;
+}
+.movies-info h2{
+
+}
+.text-movies-info p{
+        width: 90%; /* Ширина елемента */
+        /*white-space: nowrap; !* Текст в одну лінію *!*/
+        /*overflow: hidden; !* Приховує надлишковий текст *!*/
+        text-overflow: ellipsis; /* Додає "..." в кінці обрізаного тексту */
+}

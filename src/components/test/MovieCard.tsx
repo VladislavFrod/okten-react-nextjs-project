@@ -1,6 +1,5 @@
 import React, {FC} from 'react';
 import {IMovie} from "@/models/IMovie";
-import PosterPreviewComponent from "@/components/poster-preview/Poster-Preview-Component";
 
 interface MovieCardProps {
     movie: IMovie;
@@ -9,7 +8,7 @@ interface MovieCardProps {
 const MovieCard: FC<MovieCardProps> = ({ movie }) => {
     return (
         <div className="movie-card">
-            <PosterPreviewComponent movie={movie}/>
+            <img src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`} alt={movie.title}/>
             {movie.title}
         </div>
     );

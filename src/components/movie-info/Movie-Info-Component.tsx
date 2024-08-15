@@ -15,9 +15,9 @@ const MovieInfoComponent: FC<IProps> = ({movie})=>{
                 <h2>{movie.title}</h2>
             </div>
             <div>
-              <PosterPreviewComponent movie={movie}/>
+                <PosterPreviewComponent movie={movie}/>
                 <span>Release: {movie.release_date}</span>
-                <p>Genre: {movie.genre_ids}</p>
+                <p>Genre: {movie.genres.map(genre => genre.name).join(', ')}</p>
                 <p>Quality: FHD(1080p)</p>
                 <p>Overview: {movie.overview}</p>
             </div>

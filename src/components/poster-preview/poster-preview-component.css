@@ -1,0 +1,9 @@
+.img-container {
+    width: 20vh;
+}
+
+.img-container img {
+    width: 20vw;
+    height: 40vh;
+    object-fit: cover; /* Забезпечує покриття контейнера зображенням, зберігаючи співвідношення сторін */
+}

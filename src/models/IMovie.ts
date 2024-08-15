@@ -23,4 +23,8 @@ export interface IMovie {
     belongs_to_collection?: ICollection | null;
     budget?: number;
     total_pages: number
+    genres: {
+        id: number;
+        name: string;
+    }[];
 }

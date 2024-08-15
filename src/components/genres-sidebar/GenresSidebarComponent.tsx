@@ -3,7 +3,7 @@
 import React, {useEffect, useState} from 'react';
 import {getGenres} from '@/services/api-services';
 import NavLinkComponent from "@/components/nav-link-component/NavLinkComponent";
-
+import './genres-sidebar-component.css'
 type Genre = {
     id: number;
     name: string;
@@ -23,10 +23,15 @@ const GenresSidebarComponent = () => {
 
 
     return (
-        <div>
-            <h1>Genres</h1>
+        <div className="genres-sidebar">
+            <h1>Navigation panel</h1>
+            <br/>
+            <hr/>
+
             <ul>
+                <h2>Genre</h2>
                 {genres.map((genre) => (
+
                     <li key={genre.id}>
                         <NavLinkComponent path={`/genres/${genre.id}`}>{genre.name}</NavLinkComponent>
                     </li>

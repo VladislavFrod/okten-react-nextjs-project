@@ -1,0 +1,21 @@
+.movie-card {
+    width: 150px;
+    flex-shrink: 0;
+    text-align: center;
+    padding: 5px;
+    background-color: #1e1e1e;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.movie-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+}
+
+.movie-card p {
+    color: #fff;
+    margin-top: 5px;
+    font-size: 14px;
+}

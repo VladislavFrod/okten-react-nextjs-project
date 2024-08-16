@@ -19,14 +19,19 @@ const MoviesInfoComponent: FC<IProps> = ({movie}) => {
         <div className="movies-info">
             <div>
                 <PosterPreviewComponent movie={movie}/>
-                <button onClick={handleClick}>Watch info</button>
+                <button onClick={handleClick} className={'movies-info-button'}>Watch info</button>
             </div>
             <div className={'text-movies-info'}>
                 <h2>{movie.title}</h2>
-                <p>Release date:{movie.release_date}</p>
+                <br/>
+                <p>Release date: {movie.release_date}</p>
                 <p>Original language: {movie.original_language}</p>
                 <p>Quality: FHD (1080p)</p>
+                <br/>
                 <p>Overview: {movie.overview}</p>
+            </div>
+            <div>
+                *****
             </div>
 
 

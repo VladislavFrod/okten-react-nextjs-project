@@ -25,11 +25,10 @@ const GenresSidebarComponent = () => {
     return (
         <div className="genres-sidebar">
             <h1>Navigation panel</h1>
-            <br/>
-            <hr/>
+            <h1>Genre</h1>
+
 
             <ul>
-                <h2>Genre</h2>
                 {genres.map((genre) => (
 
                     <li key={genre.id}>

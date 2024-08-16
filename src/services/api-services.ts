@@ -22,8 +22,7 @@ export const getGenres = async (): Promise<IGenres> => {
 }
 
 export const getMoviesByGenre = async (genreId: number, page: number = 1): Promise<IMoviesResponse> => {
-        const response = await fetch(
-            `${baseUrl}/genre/${genreId}/movies?&language=en-US&page=${page}`, options);
+        const response = await fetch(`${baseUrl}/genre/${genreId}/movies?&language=en-US&page=${page}`, options);
         return await response.json();
 };
 

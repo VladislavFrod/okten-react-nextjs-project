@@ -1,13 +1,57 @@
-.movies-info{
-display: flex;
-margin-left: 5%;
+.movies-info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 20px;
+    border: 1px solid #2c2c2c;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
 }
-.movies-info h2{
-
+.movies-info:hover {
+    transform: scale(1.02);
 }
-.text-movies-info p{
-        width: 90%; /* Ширина елемента */
-        /*white-space: nowrap; !* Текст в одну лінію *!*/
-        /*overflow: hidden; !* Приховує надлишковий текст *!*/
-        text-overflow: ellipsis; /* Додає "..." в кінці обрізаного тексту */
+.movies-info .text-movies-info {
+    max-width: 600px;
+    margin-left: 20px;
+    color: #f1f1f1;
+}
+.text-movies-info h2 {
+    margin-bottom: 10px;
+    color: #ffcc00;
+    font-size: 24px;
+}
+.text-movies-info p {
+    margin-bottom: 8px;
+    line-height: 1.5;
+    font-size: 16px;
+    color: #ccc;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+.movies-info-button {
+    width: 95%;
+    background-color: #007acc;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-left: 5px;
+}
+.movies-info-button:hover {
+    background-color: #005fa3;
+    transform: translateY(-2px);
+}
+.movies-info .rating {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #ffcc00;
 }

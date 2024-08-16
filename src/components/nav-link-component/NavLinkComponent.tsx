@@ -1,7 +1,7 @@
 'use client';
 
 import React, { FC } from 'react';
-import Link from 'next/link'; // Імпорт Link з next/link
+import Link from 'next/link';
 
 type IProps = {
     path: string;

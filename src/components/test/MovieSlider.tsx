@@ -2,6 +2,7 @@
 import React, {FC, useState} from 'react';
 import {IMovie} from "@/models/IMovie";
 import MovieCard from "@/components/test/MovieCard";
+import './movie-slider-component.css'
 
 interface MovieSliderProps {
     movies: IMovie[];
@@ -9,7 +10,7 @@ interface MovieSliderProps {
 
 const MovieSlider: FC<MovieSliderProps> = ({ movies }) => {
     const [startIndex, setStartIndex] = useState(0);
-    const moviesToShow = 8; // Кількість фільмів, які відображаються одночасно
+    const moviesToShow = 8;
 
     const prevSlide = () => {
         setStartIndex((prevIndex) =>

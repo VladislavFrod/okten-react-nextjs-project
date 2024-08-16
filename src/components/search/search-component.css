@@ -20,7 +20,7 @@
     top: 50%;
     transform: translateY(-50%);
     background-color: #2D2D2D;
-    color: white;
+    color: #2D2D2D;
     border: none;
     padding: 10px;
     border-radius: 4px;
@@ -34,7 +34,7 @@
     right: 0;
     max-height: 300px;
     overflow-y: auto;
-    background-color: white;
+    background-color: #2D2D2D;
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-top: 5px;

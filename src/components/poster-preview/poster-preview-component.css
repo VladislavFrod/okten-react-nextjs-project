@@ -1,9 +1,15 @@
 .img-container {
-    width: 20vh;
+    width: 300px;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .img-container img {
-    width: 20vw;
-    height: 40vh;
-    object-fit: cover; /* Забезпечує покриття контейнера зображенням, зберігаючи співвідношення сторін */
+    width: 100%;
+    height: 300px;
+    display: block;
+    object-fit: cover;
+    border-radius: 8px;
 }

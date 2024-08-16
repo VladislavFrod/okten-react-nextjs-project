@@ -3,6 +3,7 @@
 import React, { FC } from 'react';
 import { PaginatedPageModel } from "@/models/PaginatedPageModel";
 import { useRouter } from 'next/navigation';
+import './pagination-component.css'
 
 interface IProps {
     next: null | PaginatedPageModel;
@@ -61,8 +62,9 @@ const PaginationComponent: FC<IProps> = ({ next, prev, totalPages, currentPage }
     };
 
     return (
-        <div>
-            <button disabled={!prev} onClick={() => {if (prev) changePage(prev.page);}}>prev</button>
+        <div className="pagination-container">
+            <button disabled={!prev} onClick={() => {if (prev) changePage(prev.page);}}>prev
+            </button>
 
             {renderPageNumbers()}
 

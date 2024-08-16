@@ -10,7 +10,7 @@ const MoviesPage = () => {
 
     useEffect(() => {
         const fetchMovies = async () => {
-            const response = await getAllMovies(5); // Завантажте фільми з першої сторінки
+            const response = await getAllMovies(3);
             setMovies(response.results);
         };
 

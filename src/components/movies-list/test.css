@@ -14,7 +14,7 @@
 }
 
 .movies-slider::-webkit-scrollbar {
-    display: none; /* Приховуємо скролбар для WebKit браузерів */
+    display: none;
 }
 
 .movies-slider > * {
@@ -23,5 +23,5 @@
 }
 
 .movies-slider > *:hover {
-    transform: scale(1.05); /* Збільшуємо елемент при наведенні */
+    transform: scale(1.05);
 }

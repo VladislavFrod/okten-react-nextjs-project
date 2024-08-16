@@ -3,10 +3,9 @@ import {Inter} from "next/font/google";
 import "./globals.css";
 import FooterComponent from "@/components/footer/Footer-Component";
 import GenresSidebarComponent from "@/components/genres-sidebar/GenresSidebarComponent";
-import Header from "@/components/header/Header";
-import MoviesPage from "@/components/slider/TestMovie";
-import MenuComponent from "@/components/header/MenuComponent";
-import SliderComponent from "@/components/slider/TestMovie";
+import HeaderComponent from "@/components/header/HeaderComponent";
+import SliderComponent from "@/components/slider/SliderComponent";
+import MenuComponent from "@/components/menu/MenuComponent";
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -22,7 +21,7 @@ export default function RootLayout({children}: Readonly<PropType>) {
       <html lang="en">
       <body className={inter.className} >
 
-        <Header/>
+        <HeaderComponent/>
         <MenuComponent/>
         <div className={'menu-component'}>
         <SliderComponent/>

@@ -13,6 +13,7 @@ const MovieCard: FC<MovieCardProps> = ({ movie }) => {
             <NavLinkComponent path={`/movies/${movie.id}`}><img src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`} alt={movie.title}/> </NavLinkComponent>
             <NavLinkComponent path={`/movies/${movie.id}`}><p>{movie.title}</p></NavLinkComponent>
         </div>
+
     );
 };
 

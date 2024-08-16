@@ -3,11 +3,11 @@
 import React from 'react';
 import Image from "next/image";
 import logo from "@/assets/logo/logo.png";
-import './header.css';
+import './header-component.css';
 import SearchComponent from "@/components/search/SearchComponent";
 import ThemeToggle from "@/components/change/ThemeToggle";
 
-const Header = () => {
+const HeaderComponent = () => {
     return (
         <header>
             <div className='logo'>
@@ -20,4 +20,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default HeaderComponent;

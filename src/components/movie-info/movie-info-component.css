@@ -1,0 +1,43 @@
+.movie-info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 20px;
+    border: 1px solid #2c2c2c;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    height: 180vh;
+    max-height: 1300px;
+}
+/*.movie-info:hover {*/
+/*    transform: scale(1.02);*/
+/*}*/
+.movie-info .text-movie-info {
+    max-width: 600px;
+    margin-left: 20px;
+    color: #f1f1f1;
+}
+.text-movie-info h2 {
+    margin-bottom: 10px;
+    color: #ffcc00;
+    font-size: 24px;
+}
+.text-movie-info p {
+    margin-bottom: 8px;
+    line-height: 1.5;
+    font-size: 16px;
+    color: #ccc;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+.movie-info .rating {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #ffcc00;
+}

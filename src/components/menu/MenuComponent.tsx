@@ -6,8 +6,8 @@ import './menu-component.css';
 const MenuComponent: FC = () => {
 
     return (
-        <div className="menuComponent">
-            <ul className='menuNavig'>
+        <div className="men-component">
+            <ul className='menu-navig'>
                 <li>
                     <NavLinkComponent path={'/'}>Home</NavLinkComponent>
                 </li>
@@ -18,7 +18,7 @@ const MenuComponent: FC = () => {
                     <NavLinkComponent path={'/series'}>Series</NavLinkComponent>
                 </li>
                 <li>
-                    <NavLinkComponent path={'/popular'}>Popular</NavLinkComponent>
+                    <NavLinkComponent path={'/popular'}><p>Popular</p></NavLinkComponent>
                 </li>
             </ul>
         </div>

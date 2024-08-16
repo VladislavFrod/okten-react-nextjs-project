@@ -22,6 +22,7 @@ body {
     overflow-x: hidden;
     width: 100vw;
     background-color: black;
+    @apply bg-white dark:bg-black text-gray-900 dark:text-gray-100 transition-colors duration-300;
 }
 
 .movie-card {

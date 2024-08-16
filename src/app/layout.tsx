@@ -4,8 +4,9 @@ import "./globals.css";
 import FooterComponent from "@/components/footer/Footer-Component";
 import GenresSidebarComponent from "@/components/genres-sidebar/GenresSidebarComponent";
 import Header from "@/components/header/Header";
-import MoviesPage from "@/components/test/TestMovie";
+import MoviesPage from "@/components/slider/TestMovie";
 import MenuComponent from "@/components/header/MenuComponent";
+import SliderComponent from "@/components/slider/TestMovie";
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -22,9 +23,9 @@ export default function RootLayout({children}: Readonly<PropType>) {
       <body className={inter.className} >
 
         <Header/>
-        <div className={'menu-component'}>
         <MenuComponent/>
-        <MoviesPage/>
+        <div className={'menu-component'}>
+        <SliderComponent/>
         </div>
         <div className={'main-component'}>
         <GenresSidebarComponent/>

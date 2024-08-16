@@ -38,16 +38,25 @@ body {
     background-color: #323232;
     width: 80%;
     margin-left: 10%;
-    margin-top: 10%;
+    /*margin-top: 10%;*/
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 20px;
+    max-width: 1400px;
 }
 
 .main-component {
     display: flex;
-    background-color: #414141;
+    /*background-color: #414141;*/
     width: 80vw;
     margin-left: 10%;
     margin-top: 1%;
  }
+/*.menus-component{*/
+/*    background-color: #323232;*/
+/*    margin-left: 10%;*/
+/*    margin-top: 10%;*/
+/*    border-radius: 10px;*/
+/*    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);*/
+/*    padding: 20px;*/
+/*}*/

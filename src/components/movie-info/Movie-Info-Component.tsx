@@ -6,13 +6,13 @@ import './movie-info-component.css';
 import StarsRating from "@/components/stars-rating/Stars-Rating";
 import GenresList from "@/components/genre-badge/GenresList";
 import {useRouter} from "next/navigation";
-import MovieVideos from "@/components/video/MovieVideos";
+import VideoComponent from "@/components/video/VideoComponent";
 
 interface IProps {
     movie: IMovie;
 }
 
-const MovieInfoComponent: FC<IProps> = ({ movie}) => {
+const MovieInfoComponent: FC<IProps> = ({movie}) => {
 
     const router = useRouter();
 
@@ -33,18 +33,19 @@ const MovieInfoComponent: FC<IProps> = ({ movie}) => {
                     <GenresList genres={movie.genres} onGenreClick={handleClick}/>
                     <p>Release date: {movie.release_date}</p>
                     <p>Original language: {movie.original_language}</p>
+                    <p>Production countries: {movie.production_countries.map(country => country.name).join(', ')}</p>
                     <p>Quality: FHD (1080p)</p>
                     <br/>
-                    <p>Overview: {movie.overview}</p>
+                    <p>Overview:{movie.tagline} {movie.overview}</p>
+
                 </div>
                 <div>
                     <StarsRating voteAverage={movie.vote_average}/>
                 </div>
-                <div>
-                    <MovieVideos movieId={movie.id} videoType={videoType}/>
-                </div>
             </div>
-
+            <div>
+                <VideoComponent movieId={movie.id} videoType={videoType}/>
+            </div>
         </div>
     );
 }

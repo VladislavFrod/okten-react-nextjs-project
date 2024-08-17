@@ -7,7 +7,7 @@ interface IGenreBadgeProps {
     onClick: (id: number) => void;
 }
 
-const GenreBadge:FC<IGenreBadgeProps> = ({ genreName, genreId, onClick }) => {
+const GenreBadge: FC<IGenreBadgeProps> = ({genreName, genreId, onClick}) => {
     return (
         <button className="genre-badge" onClick={() => onClick(genreId)}>{genreName}</button>
     );

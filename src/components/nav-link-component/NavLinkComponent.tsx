@@ -1,6 +1,6 @@
 'use client';
 
-import React, { FC } from 'react';
+import React, {FC} from 'react';
 import Link from 'next/link';
 
 type IProps = {
@@ -8,7 +8,7 @@ type IProps = {
     children: React.ReactNode;
 };
 
-const NavLinkComponent: FC<IProps> = ({ path, children }) => {
+const NavLinkComponent: FC<IProps> = ({path, children}) => {
     return (
         <Link href={path} className="nav-link">
             {children}

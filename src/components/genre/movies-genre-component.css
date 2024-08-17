@@ -1,4 +1,4 @@
-.load-button{
+.load-button {
     width: 30%;
     background-color: #191818;
     color: #fff;
@@ -13,6 +13,7 @@
     margin-left: 35%;
 
 }
+
 .load-button:hover {
     background-color: #282626;
     transform: translateY(-2px);

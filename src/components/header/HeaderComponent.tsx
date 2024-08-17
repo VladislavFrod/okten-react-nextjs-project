@@ -15,7 +15,7 @@ const HeaderComponent = () => {
                 <h2 className='kino-cove'>KinoCove</h2>
             </div>
             <SearchComponent/>
-          <ThemeToggle/>
+            <ThemeToggle/>
         </header>
     );
 };

@@ -1,8 +1,8 @@
 'use client'
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 
-import { IMovie } from "@/models/IMovie";
-import { getAllMovies } from "@/services/api-services";
+import {IMovie} from "@/models/IMovie";
+import {getAllMovies} from "@/services/api-services";
 import MovieSlider from "@/components/slider/MovieSlider";
 
 const SliderComponent = () => {
@@ -19,7 +19,7 @@ const SliderComponent = () => {
 
     return (
         <div>
-            {movies.length > 0 && <MovieSlider movies={movies} />}
+            {movies.length > 0 && <MovieSlider movies={movies}/>}
         </div>
     );
 };

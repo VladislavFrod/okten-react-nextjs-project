@@ -5,27 +5,33 @@
     width: 400px;
     color: #fff;
 }
+
 .genres-sidebar h1 {
     font-size: 24px;
     margin-bottom: 20px;
     text-align: center;
 }
+
 .genres-sidebar h2 {
     font-size: 18px;
     margin-bottom: 15px;
     border-bottom: 1px solid #444;
     padding-bottom: 10px;
 }
+
 .genres-sidebar ul {
     list-style: none;
     padding: 0;
 }
+
 .genres-sidebar li {
     margin-bottom: 10px;
 }
+
 .genres-sidebar li:last-child {
     margin-bottom: 0;
 }
+
 .genres-sidebar a {
     color: #fff;
     text-decoration: none;
@@ -35,6 +41,7 @@
     border-radius: 4px;
     transition: background-color 0.3s;
 }
+
 .genres-sidebar a:hover {
     background-color: #444;
 }

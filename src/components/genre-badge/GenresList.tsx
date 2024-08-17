@@ -12,7 +12,7 @@ interface IGenresListProps {
     onGenreClick: (id: number) => void;
 }
 
-const GenresList: FC<IGenresListProps> = ({ genres, onGenreClick }) => {
+const GenresList: FC<IGenresListProps> = ({genres, onGenreClick}) => {
     return (
         <div className="genres-list">
             {genres.map(genre => (

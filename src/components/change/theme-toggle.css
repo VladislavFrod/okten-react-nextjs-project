@@ -1,11 +1,13 @@
 :root {
     --transition-speed: 0.3s;
 }
+
 .dark {
     background-color: #121212;
     color: #ffffff;
     transition: background-color var(--transition-speed), color var(--transition-speed);
 }
+
 body {
     transition: background-color var(--transition-speed), color var(--transition-speed);
 }

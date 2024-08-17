@@ -8,7 +8,7 @@ interface MovieSliderProps {
     movies: IMovie[];
 }
 
-const MovieSlider: FC<MovieSliderProps> = ({ movies }) => {
+const MovieSlider: FC<MovieSliderProps> = ({movies}) => {
     const [startIndex, setStartIndex] = useState(0);
     const moviesToShow = 8;
 

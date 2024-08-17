@@ -4,6 +4,7 @@ import React, {useEffect, useState} from 'react';
 import {getGenres} from '@/services/api-services';
 import NavLinkComponent from "@/components/nav-link-component/NavLinkComponent";
 import './genres-sidebar-component.css'
+
 type Genre = {
     id: number;
     name: string;
@@ -14,8 +15,8 @@ const GenresSidebarComponent = () => {
 
     useEffect(() => {
         const loadGenres = async () => {
-                const data = await getGenres();
-                setGenres(data.genres);
+            const data = await getGenres();
+            setGenres(data.genres);
         };
 
         loadGenres();

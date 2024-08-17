@@ -1,9 +1,6 @@
-/* stars-rating.css */
-
 .movie-rating-container {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: -80px;
-    /*margin-top: 50px;*/
 }

@@ -1,12 +1,27 @@
-'use client';
-import React, { FC } from 'react';
-import { IVideo } from "@/models/IVideo";
+'use client'
+import React, {FC, useEffect, useState} from 'react';
+import {IVideo} from "@/models/IVideo";
+import {getMovieVideos} from "@/services/api-services";
+import './video-component.css'
 
 interface IProps {
-    video: IVideo;
+    movieId: number;
+    videoType: string;
 }
 
-const VideoComponent: FC<IProps> = ({ video }) => {
+const VideoComponent: FC<IProps> = ({movieId, videoType}) => {
+    const [video, setVideo] = useState<IVideo | null>(null);
+
+    useEffect(() => {
+        const fetchVideos = async () => {
+            const videoData = await getMovieVideos(movieId);
+            const selectedVideo = videoData.find(v => v.type === videoType) || null;
+            setVideo(selectedVideo);
+        };
+
+        fetchVideos();
+    }, [movieId, videoType]);
+
     const getVideoUrl = (video: IVideo) => {
         switch (video.site) {
             case 'YouTube':
@@ -16,20 +31,22 @@ const VideoComponent: FC<IProps> = ({ video }) => {
         }
     };
 
-    const videoUrl = getVideoUrl(video);
-
     return (
-        <div className="video-container">
-            {videoUrl && (
-                <iframe
-                    width="560"
-                    height="315"
-                    src={videoUrl}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    // title={video.name}
-                ></iframe>
+        <div>
+            {video ? (
+                <div className="video-container">
+                    <h4>Watch online {video.name}</h4>
+                    <iframe
+                        width="560"
+                        height="315"
+                        src={getVideoUrl(video) || ''}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        title={video.name}
+                    ></iframe>
+                </div>
+            ) : (
+                <p>Could not find video</p>
             )}
         </div>
     );

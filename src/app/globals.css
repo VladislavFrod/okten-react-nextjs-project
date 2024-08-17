@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -22,7 +23,7 @@ body {
     overflow-x: hidden;
     width: 100vw;
     background-color: black;
-    @apply bg-white dark:bg-black text-gray-900 dark:text-gray-100 transition-colors duration-300;
+    /*@apply bg-white dark:bg-black text-gray-900 dark:text-gray-100 transition-colors duration-300;*/
 }
 
 .movie-card {
@@ -30,11 +31,13 @@ body {
     flex-shrink: 0;
     transition: transform 0.3s;
 }
+
 .movie-card img {
     width: auto;
     height: 100px;
     border-radius: 8px;
 }
+
 .menu-component {
     background-color: #323232;
     width: 80%;
@@ -52,12 +55,4 @@ body {
     width: 80vw;
     margin-left: 10%;
     margin-top: 1%;
- }
-/*.menus-component{*/
-/*    background-color: #323232;*/
-/*    margin-left: 10%;*/
-/*    margin-top: 10%;*/
-/*    border-radius: 10px;*/
-/*    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);*/
-/*    padding: 20px;*/
-/*}*/
+}

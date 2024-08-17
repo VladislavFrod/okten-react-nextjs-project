@@ -27,4 +27,12 @@ export interface IMovie {
         id: number;
         name: string;
     }[];
+    tagline: string
+    production_countries: [
+        {
+            iso_3166_1: string,
+            name: string
+        }
+    ]
+
 }

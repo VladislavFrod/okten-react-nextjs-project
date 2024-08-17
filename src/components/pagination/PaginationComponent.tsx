@@ -1,8 +1,8 @@
 'use client';
 
-import React, { FC } from 'react';
-import { PaginatedPageModel } from "@/models/PaginatedPageModel";
-import { useRouter } from 'next/navigation';
+import React, {FC} from 'react';
+import {PaginatedPageModel} from "@/models/PaginatedPageModel";
+import {useRouter} from 'next/navigation';
 import './pagination-component.css'
 
 interface IProps {
@@ -12,7 +12,7 @@ interface IProps {
     currentPage: number;
 }
 
-const PaginationComponent: FC<IProps> = ({ next, prev, totalPages, currentPage }) => {
+const PaginationComponent: FC<IProps> = ({next, prev, totalPages, currentPage}) => {
     const router = useRouter();
 
     const changePage = (page: number) => {
@@ -41,7 +41,9 @@ const PaginationComponent: FC<IProps> = ({ next, prev, totalPages, currentPage }
             if (startPage > 1) {
                 pageNumbers.push(<button key={1} onClick={() => changePage(1)}>1</button>);
 
-                if (startPage > 2) {pageNumbers.push(<span key="start-dots">...</span>)}
+                if (startPage > 2) {
+                    pageNumbers.push(<span key="start-dots">...</span>)
+                }
             }
 
             for (let i = startPage; i <= endPage; i++) {
@@ -51,8 +53,10 @@ const PaginationComponent: FC<IProps> = ({ next, prev, totalPages, currentPage }
             }
 
             if (endPage < totalPages) {
-                if (endPage < totalPages - 1) {pageNumbers.push(<span key="end-dots">...</span>);
-                }pageNumbers.push(
+                if (endPage < totalPages - 1) {
+                    pageNumbers.push(<span key="end-dots">...</span>);
+                }
+                pageNumbers.push(
                     <button key={totalPages} onClick={() => changePage(totalPages)}>{totalPages}</button>
                 );
             }
@@ -63,12 +67,17 @@ const PaginationComponent: FC<IProps> = ({ next, prev, totalPages, currentPage }
 
     return (
         <div className="pagination-container">
-            <button disabled={!prev} onClick={() => {if (prev) changePage(prev.page);}}>prev
+            <button disabled={!prev} onClick={() => {
+                if (prev) changePage(prev.page);
+            }}>prev
             </button>
 
             {renderPageNumbers()}
 
-            <button disabled={!next} onClick={() => {if (next) changePage(next.page);}}>next</button>
+            <button disabled={!next} onClick={() => {
+                if (next) changePage(next.page);
+            }}>next
+            </button>
         </div>
     );
 };

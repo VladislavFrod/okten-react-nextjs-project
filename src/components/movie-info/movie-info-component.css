@@ -1,5 +1,10 @@
+.movie-container{
+    height: 180vh;
+    border: 1px solid #2c2c2c;
+    background-color: #333;
+}
 .movie-info {
-    display: flex;
+    /*display: flex;*/
     flex-direction: row;
     align-items: flex-start;
     padding: 20px;
@@ -41,3 +46,32 @@
     font-size: 20px;
     color: #ffcc00;
 }
+.movie-info .video-container {
+    margin-top: 20px;
+    border: 1px solid #444;
+    border-radius: 10px;
+    background-color: #222;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.movie-info .video-container h3 {
+    margin-bottom: 10px;
+    color: #ffcc00;
+    font-size: 20px;
+}
+
+.movie-info .video-container iframe {
+    width: 100%;
+    height: 315px; /* Можна налаштувати висоту відео */
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.movie-info .video-container p {
+    margin-top: 10px;
+    color: #ccc;
+    font-size: 14px;
+}
+

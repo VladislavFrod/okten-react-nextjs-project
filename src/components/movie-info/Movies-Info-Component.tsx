@@ -3,6 +3,7 @@ import {IMovie} from "@/models/IMovie";
 import PosterPreviewComponent from "@/components/poster-preview/Poster-Preview-Component";
 import './movies-info-component.css'
 import {useRouter} from "next/navigation";
+import StarsRating from "@/components/stars-rating/Stars-Rating";
 
 interface IProps{
     movie: IMovie
@@ -31,7 +32,7 @@ const MoviesInfoComponent: FC<IProps> = ({movie}) => {
                 <p>Overview: {movie.overview}</p>
             </div>
             <div>
-                *****
+                <StarsRating voteAverage={movie.vote_average} />
             </div>
 
 

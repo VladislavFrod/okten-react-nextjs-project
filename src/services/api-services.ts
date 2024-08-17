@@ -3,6 +3,7 @@ import {options} from "@/constants/apiConfig";
 import {IMovie} from "@/models/IMovie";
 import {IGenres} from "@/models/IGenres";
 import {IMoviesResponse} from "@/models/IMoviesResponse";
+import {IVideo} from "@/models/IVideo";
 
 
 export const getAllMovies = async (page: number = 1): Promise<IMoviesResponse> => {
@@ -30,5 +31,10 @@ export const searchMovies = async (query: string): Promise<IMovie[]> => {
         const response = await fetch(
             `${baseUrl}/search/movie?query=${query}&language=en-US`, options);
         const data: IMoviesResponse = await response.json();
+        return data.results;
+};
+export const getMovieVideos = async (movieId: number): Promise<IVideo[]> => {
+        const response = await fetch(`${baseUrl}/movie/${movieId}/videos`, options);
+        const data = await response.json();
         return data.results;
 };

@@ -1,0 +1,10 @@
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-right: -10%;
+}
+
+.username {
+    font-size: 16px;
+    color: #fff;
+}

@@ -1,5 +1,6 @@
 .movie-card {
     width: 150px;
+    height: 150px;
     flex-shrink: 0;
     text-align: center;
     padding: 5px;

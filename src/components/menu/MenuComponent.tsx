@@ -14,12 +14,12 @@ const MenuComponent: FC = () => {
                 <li>
                     <NavLinkComponent path={'/movies'}>Movie</NavLinkComponent>
                 </li>
-                <li>
-                    <NavLinkComponent path={'/series'}>Series</NavLinkComponent>
-                </li>
-                <li>
-                    <NavLinkComponent path={'/popular'}><p>Popular</p></NavLinkComponent>
-                </li>
+                {/*<li>*/}
+                {/*    <NavLinkComponent path={'/series'}>Series</NavLinkComponent>*/}
+                {/*</li>*/}
+                {/*<li>*/}
+                {/*    <NavLinkComponent path={'/popular'}><p>Popular</p></NavLinkComponent>*/}
+                {/*</li>*/}
             </ul>
         </div>
     );

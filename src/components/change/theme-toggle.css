@@ -1,75 +1,88 @@
-:root {
-    --bg-color-light: #ffffff;
-    --text-color-light: #ffffff;
-    --bg-color-dark: #000000;
-    --text-color-dark: #000000;
-    --bg-color-dark-header: #2c2c2c;
-    --bg-color-light-header: grey;
-    --bg-color-dark-slider: #323232;
-    --bg-color-light-slider: grey;
-    --bg-color-dark-card: #1e1e1e;
-    --bg-color-light-card: grey;
-    --bg-color-dark-sidebar: #2c2c2c;
-    --bg-color-light-sidebar: grey;
-    --bg-color-dark-movies: #333;
-    --bg-color-light-movies: white;
-}
+/*:root {*/
+/*    --bg-color-light: #ffffff;*/
+/*    --text-color-light: #000000;*/
+/*    --bg-color-dark: #000000;*/
+/*    --text-color-dark: #ffffff;*/
+/*    --bg-color-dark-header: #2c2c2c;*/
+/*    --bg-color-light-header: #e0e0e0;*/
+/*    --bg-color-dark-slider: #323232;*/
+/*    --bg-color-light-slider: #f5f5f5;*/
+/*    --bg-color-dark-card: #1e1e1e;*/
+/*    --bg-color-light-card: #f0f0f0;*/
+/*    --bg-color-dark-sidebar: #2c2c2c;*/
+/*    --bg-color-light-sidebar: #e0e0e0;*/
+/*    --bg-color-dark-movies: #333;*/
+/*    --bg-color-light-movies: #ffffff;*/
+/*}*/
 
-body {
-    background-color: var(--bg-color-light);
-    color: var(--text-color-light);
-    transition: background-color 0.3s, color 0.3s;
-}
+/*body {*/
+/*    background-color: var(--bg-color-light);*/
+/*    color: var(--text-color-light);*/
+/*    transition: background-color 0.3s, color 0.3s;*/
+/*}*/
 
-.dark body {
-    background-color: var(--bg-color-dark);
-    color: var(--text-color-dark);
-}
+/*.dark body {*/
+/*    background-color: var(--bg-color-dark);*/
+/*    color: var(--text-color-dark);*/
+/*}*/
 
-header{
-    background-color: var(--bg-color-light-header);
-    color: var(--text-color-light);
-    transition: background-color 0.3s, color 0.3s;
-}
-.dark header {
-    background-color: var(--bg-color-dark-header);
-    color: var(--text-color-dark);
-}
-.menu-navig li a{
-    color: var(--text-color-dark);
-}
-.dark .menu-navig li a{
-    color: var(--text-color-light);
-}
-.menu-navig li:hover{
-    background-color: var(--bg-color-light);
-}
-.dark .menu-navig li a:hover{
-    background-color: var(--text-color-dark);
-}
-.menu-component{
-    background-color: var(--bg-color-light-slider);
-}
-.dark .menu-component{
-    background-color: var(--bg-color-dark-slider);
-}
-.movie-card{
-    background-color: var(--bg-color-light-card);
-    color:var(--text-color-dark);
-}
-.dark .movie-card{
-    background-color: var(--bg-color-dark-card);
-    color: var(--text-color-light);
-}
-.genres-sidebar{
-    background-color: var(--bg-color-light-sidebar);
-}
-.dark .genres-sidebar{
-    background-color: var(--bg-color-dark-sidebar);
-}
-.movies-info{
-    background-color: var(--bg-color-light-movies);
-}
-.dark .movies-info{
-    background-color: var(--bg-color-light-movies);
-}
+/*header {*/
+/*    background-color: var(--bg-color-light-header);*/
+/*    color: var(--text-color-light);*/
+/*    transition: background-color 0.3s, color 0.3s;*/
+/*}*/
+
+/*.dark header {*/
+/*    background-color: var(--bg-color-dark-header);*/
+/*    color: var(--text-color-dark);*/
+/*}*/
+
+/*.menu-navig li a {*/
+/*    color: var(--text-color-light);*/
+/*}*/
+
+/*.dark .menu-navig li a {*/
+/*    color: var(--text-color-dark);*/
+/*}*/
+
+/*.menu-navig li:hover {*/
+/*    background-color: var(--bg-color-light);*/
+/*}*/
+
+/*.dark .menu-navig li:hover {*/
+/*    background-color: var(--text-color-dark);*/
+/*}*/
+
+/*.menu-component {*/
+/*    background-color: var(--bg-color-light-slider);*/
+/*}*/
+
+/*.dark .menu-component {*/
+/*    background-color: var(--bg-color-dark-slider);*/
+/*}*/
+
+/*.movie-card {*/
+/*    background-color: var(--bg-color-light-card);*/
+/*    color: var(--text-color-dark);*/
+/*}*/
+
+/*.dark .movie-card {*/
+/*    background-color: var(--bg-color-dark-card);*/
+/*    color: var(--text-color-light);*/
+/*}*/
+
+/*.genres-sidebar {*/
+/*    background-color: var(--bg-color-light-sidebar);*/
+/*}*/
+
+/*.dark .genres-sidebar {*/
+/*    background-color: var(--bg-color-dark-sidebar);*/
+/*}*/
+
+/*.movies-info {*/
+/*    background-color: var(--bg-color-light-movies);*/
+/*}*/
+
+/*.dark .movies-info {*/
+/*    background-color: var(--bg-color-dark-movies);*/
+/*}*/
